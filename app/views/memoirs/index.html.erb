@@ -1,0 +1,14 @@
+<div class="small-10 medium-9 large-8 small-centered columns text-center">
+
+  <h1>Memoirs</h1>
+
+  <div class="memoirs">
+  <% @memoirs.each do |memoir| %>
+    <p> <%= memoir.memoir %> <br>
+        <%= memoir.name %>, <%= memoir.age %> <br>
+        <%= memoir.neighborhood.name %> </p>
+    <br>
+  <% end %>
+  </div>
+
+</div>
