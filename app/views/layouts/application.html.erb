@@ -12,16 +12,13 @@
       <li class="name">
         <h1><a href="/">Sixwords</a></h1>
       </li>
-      <li class="name">
-        <h1></h1>
-      </li>
     </ul>
 
     <section class="top-bar-section">
       <ul class="right">
-          <li><%= link_to "Random", memoirs_path %></li>
-          <li><%= link_to "Neighborhoods", neighborhoods_path %></li>
-          <li><%= link_to "Submit", new_memoir_path %></li>
+        <li><%= link_to "Random", memoirs_path %></li>
+        <li><%= link_to "Neighborhoods", neighborhoods_path %></li>
+        <li><%= link_to "Submit", new_memoir_path %></li>
         <%- if current_user -%>
           <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
         <%- else -%>

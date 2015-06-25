@@ -1,5 +1,14 @@
 <div class="small-10 medium-9 large-8 small-centered columns text-center">
 
+  <%= form_tag("/", method: "get") do %>
+
+<%= label_tag(:q, "Search for:") %>
+<%= text_field_tag(:q) %>
+<%= submit_tag("Search") %>
+
+<% end %>
+
+
   <div class="memoirs">
     <h1>Memoirs</h1>
     <% @memoirs.each do |memoir| %>
@@ -9,3 +18,14 @@
     <% end %>
   </div>
 </div>
+
+
+
+
+
+      <!--   <div class="large-8 small-9 columns">
+        <input type="text" action="/search" name="search" placeholder="Enter Keyword">
+      </div>
+      <div class="large-4 small-3 columns">
+        <input type="submit" class="alert button expand" name="search" value="Search">
+      </div> -->
