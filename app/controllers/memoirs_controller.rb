@@ -3,7 +3,8 @@ class MemoirsController < ApplicationController
     if params[:query] == nil
       @memoirs = Memoir.order("random()").limit(6)
     else
-      @memoirs = Memoir.where("memoir ILIKE '%#{params[:query]}%'")
+      query = "%#{params[:query]}%"
+      @memoirs = Memoir.where("memoir ILIKE ? OR name ILIKE ? OR age ILIKE ?", query, query, query )
     end
   end
 
