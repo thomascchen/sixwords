@@ -1,6 +1,11 @@
 class MemoirsController < ApplicationController
   def index
-    @memoirs = Memoir.order("random()").limit(6)
+    if params[:query] == nil
+      @memoirs = Memoir.order("random()").limit(6)
+    else
+      query = "%#{params[:query]}%"
+      @memoirs = Memoir.where("memoir ILIKE ? OR name ILIKE ? OR age ILIKE ?", query, query, query )
+    end
   end
 
   def show
@@ -19,6 +24,15 @@ class MemoirsController < ApplicationController
     else
       flash[:error] = @memoir.errors.full_messages.join(". ")
       render :new
+    end
+  end
+
+  def search
+    if params[:search] == nil
+      render :index
+    else
+      @memoirs = Memoir.where("memoir ILIKE '%#{params[:search]}%'")
+      redirect_to root_path
     end
   end
 

@@ -1,7 +1,8 @@
-<div class="small-10 medium-9 large-8 small-centered columns text-center">
+<div class="small-8 medium-5 large-3 small-centered columns text-center">
+
+  <h1>Memoirs</h1>
 
   <div class="memoirs">
-    <h1>Memoirs</h1>
     <% @memoirs.each do |memoir| %>
       <p><%= link_to memoir.memoir, memoir_path(memoir) %><br>
         <%= memoir.name %>, <%= memoir.age %>, <%= memoir.neighborhood.name %><br>
@@ -9,3 +10,14 @@
     <% end %>
   </div>
 </div>
+
+
+
+
+
+      <!--   <div class="large-8 small-9 columns">
+        <input type="text" action="/search" name="search" placeholder="Enter Keyword">
+      </div>
+      <div class="large-4 small-3 columns">
+        <input type="submit" class="alert button expand" name="search" value="Search">
+      </div> -->
