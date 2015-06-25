@@ -1,6 +1,6 @@
 class MemoirsController < ApplicationController
   def index
-    if params[:q] == nil
+    if params[:query] == nil
       @memoirs = Memoir.order("random()").limit(6)
     else
       @memoirs = Memoir.where("memoir ILIKE '%#{params[:q]}%'")

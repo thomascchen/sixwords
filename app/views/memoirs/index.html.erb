@@ -1,16 +1,8 @@
-<div class="small-10 medium-9 large-8 small-centered columns text-center">
+<div class="small-8 medium-5 large-3 small-centered columns text-center">
 
-  <%= form_tag("/", method: "get") do %>
-
-<%= label_tag(:q, "Search for:") %>
-<%= text_field_tag(:q) %>
-<%= submit_tag("Search") %>
-
-<% end %>
-
+  <h1>Memoirs</h1>
 
   <div class="memoirs">
-    <h1>Memoirs</h1>
     <% @memoirs.each do |memoir| %>
       <p><%= link_to memoir.memoir, memoir_path(memoir) %><br>
         <%= memoir.name %>, <%= memoir.age %>, <%= memoir.neighborhood.name %><br>
