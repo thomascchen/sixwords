@@ -1,0 +1,12 @@
+<div class="small-10 medium-9 large-8 small-centered columns text-center">
+
+  <h1>Neighborhoods</h1>
+
+  <div class="memoirs">
+    <ul>
+      <% @neighborhoods.each do |n| %>
+        <li><%= link_to n.name, neighborhood_path(n) %> </li>
+      <% end %>
+    </ul>
+  </div>
+</div>

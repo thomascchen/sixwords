@@ -31,4 +31,7 @@ Neighborhood.create(name: "West Roxbury") #22
 
 Memoir.create(name: "Tom", age: 32, memoir: "I came I coded I conquered.", neighborhood_id: 13)
 Memoir.create(name: "Mike", age: 16, memoir: "Life is good. Life is bad.", neighborhood_id: 1)
-Memoir.create(name: "Anna", age: 72, memoir: "I had it pretty good till now", neighborhood_id: 20)
+Memoir.create(name: "Anna", age: 72, memoir: "I had it pretty good. Yup.", neighborhood_id: 20)
+Memoir.create(name: "Jill", age: 32, memoir: "I slept too much nuff said.", neighborhood_id: 5)
+Memoir.create(name: "Ruby", age: 16, memoir: "Was greater, learned ruby, became greater.", neighborhood_id: 7)
+Memoir.create(name: "Cece", age: 72, memoir: "I had it pretty good. Yup.", neighborhood_id: 18)

@@ -1,24 +1,24 @@
 <div class="small-10 medium-8 large-4 small-centered columns text-center">
 
-<h1>Submit a Memoir</h1>
+  <h1>Submit a Memoir</h1>
 
-<div class="text-left">
+  <div class="text-left">
 
-    <%= form_for @memoir do |f| %>
-      <%= f.label :name %>
-      <%= f.text_field :name %>
+      <%= form_for @memoir do |f| %>
+        <%= f.label :name %>
+        <%= f.text_field :name %>
 
-      <%= f.label :age %>
-      <%= f.text_field :age %>
+        <%= f.label :age %>
+        <%= f.text_field :age %>
 
-      <%= f.label :memoir %>
-      <%= f.text_area :memoir %>
+        <%= f.label :memoir %>
+        <%= f.text_area :memoir %>
 
-      <%= f.label :neighborhood_id %>
-      <%= f.select :neighborhood_id, @neighborhood_options %>
+        <%= f.label :neighborhood_id %>
+        <%= f.select :neighborhood_id, Neighborhood.all.map {|n| [n.name, n.id]} %>
 
-      <%= f.submit "Submit" %>
-    <% end %>
-
+        <%= f.submit "Submit" %>
+      <% end %>
+  </div>
 
 </div>

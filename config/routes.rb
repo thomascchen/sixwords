@@ -3,7 +3,11 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :memoirs, except: [:destroy, :edit, :update]
-  resources :neighborhoods, only: [:index, :show]
+
+  resources :neighborhoods, only: [:index, :show] do
+    resources :memoirs, only: [:index]
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

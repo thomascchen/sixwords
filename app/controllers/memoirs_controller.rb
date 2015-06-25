@@ -1,18 +1,21 @@
 class MemoirsController < ApplicationController
   def index
-    @memoirs = Memoir.all
+    @memoirs = Memoir.order("random()").limit(6)
+  end
+
+  def show
+    @memoir = Memoir.find(params[:id])
   end
 
   def new
     @memoir = Memoir.new
-    @neighborhood_options = Neighborhood.all.map {|n| [n.name, n.id]}
   end
 
   def create
     @memoir = Memoir.new(memoir_params)
     if @memoir.save
       flash[:notice] = 'Memoir added.'
-      redirect_to memoir_path
+      redirect_to memoir_path(@memoir)
     else
       flash[:error] = @memoir.errors.full_messages.join(". ")
       render :new
