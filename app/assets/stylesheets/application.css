@@ -13,10 +13,22 @@
  *= require_tree .
  *= require_self
  *= require foundation_and_overrides
-
+ *= require animate.css
  */
 
 .memoirs {
   display: inline-block;
+  border-color: black;
+  border-style: solid;
+  margin: 1%;
+  padding: 5%;
+}
+
+.neighborhoods {
+  display: inline-block;
   text-align: left;
+}
+
+.show {
+  margin-top: 20%;
 }

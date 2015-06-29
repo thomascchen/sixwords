@@ -17,7 +17,7 @@
     <section class="top-bar-section">
       <ul class="right">
         <li><%= form_tag("/", method: "get") do %>
-        <%= text_field_tag(:query) %></li>
+        <%= text_field_tag(:query, nil, required: true) %></li>
         <li><%= submit_tag("Search") %>
         <% end %></li>
         <li><%= link_to "Random", memoirs_path %></li>

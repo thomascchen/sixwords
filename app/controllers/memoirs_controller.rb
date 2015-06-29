@@ -1,10 +1,14 @@
 class MemoirsController < ApplicationController
   def index
     if params[:query] == nil
-      @memoirs = Memoir.order("random()").limit(6)
-    else
-      query = "%#{params[:query]}%"
-      @memoirs = Memoir.where("memoir ILIKE ? OR name ILIKE ? OR age ILIKE ?", query, query, query )
+      @memoirs = Memoir.order("random()")
+    elsif params[:query].split.size == 1
+      @memoirs = Memoir.where("memoir ILIKE '%#{params[:query]}%' OR name ILIKE '%#{params[:query]}%'")
+    elsif params[:query].split.size >= 2
+      split_query = params[:query].split
+      mapped_split_query = split_query.map { |word| "(memoir ILIKE '%#{word}%' OR name ILIKE '%#{word}%') AND " }
+      formatted_query = mapped_split_query.inject(:+).rpartition(" AND ").first
+      @memoirs = Memoir.where(formatted_query)
     end
   end
 

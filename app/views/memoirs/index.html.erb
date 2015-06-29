@@ -1,23 +1,17 @@
-<div class="small-8 medium-5 large-3 small-centered columns text-center">
+<div class="small-10 medium-12 large-12 small-centered columns text-center">
 
-  <h1>Memoirs</h1>
+  <%= link_to root_path do %>
+    <div>
+      <h1 class="text-center">Memoirs</h1>
+    </div>
+  <% end %>
 
-  <div class="memoirs">
+  <div class="row">
     <% @memoirs.each do |memoir| %>
-      <p><%= link_to memoir.memoir, memoir_path(memoir) %><br>
-        <%= memoir.name %>, <%= memoir.age %>, <%= memoir.neighborhood.name %><br>
-      </p><br>
+      <p class="memoirs animated zoomIn"><%= link_to memoir_path(memoir) do %><%= memoir.memoir %><br>
+        <%= memoir.name %>, <%= memoir.age %>, <%= memoir.neighborhood.name %>
+        <% end %>
+      </p>
     <% end %>
   </div>
 </div>
-
-
-
-
-
-      <!--   <div class="large-8 small-9 columns">
-        <input type="text" action="/search" name="search" placeholder="Enter Keyword">
-      </div>
-      <div class="large-4 small-3 columns">
-        <input type="submit" class="alert button expand" name="search" value="Search">
-      </div> -->
