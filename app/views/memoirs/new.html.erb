@@ -1,24 +1,28 @@
-<div class="small-10 medium-8 large-4 small-centered columns text-center">
+<div class="small-10 medium-12 large-12 small-centered columns text-center">
 
-  <h1>Submit a Memoir</h1>
+  <h1 class="text-center heading animated pulse">Submit a Memoir</h1>
 
-  <div class="text-left">
+  <div class="small-10 medium-8 large-4 small-centered columns text-center">
 
-      <%= form_for @memoir do |f| %>
-        <%= f.label :name %>
-        <%= f.text_field :name %>
+    <div class="text-left">
 
-        <%= f.label :age %>
-        <%= f.text_field :age %>
+        <%= form_for @memoir do |f| %>
+          <%= f.label :name %>
+          <%= f.text_field :name %>
 
-        <%= f.label :memoir %>
-        <%= f.text_area :memoir %>
+          <%= f.label :age %>
+          <%= f.text_field :age %>
 
-        <%= f.label :neighborhood_id %>
-        <%= f.select :neighborhood_id, Neighborhood.all.map {|n| [n.name, n.id]} %>
+          <%= f.label :memoir %>
+          <%= f.text_area :memoir %>
 
-        <%= f.submit "Submit" %>
-      <% end %>
+          <%= f.label :neighborhood_id %>
+          <%= f.select :neighborhood_id, Neighborhood.all.map {|n| [n.name, n.id]} %>
+
+          <%= f.submit "Submit" %>
+        <% end %>
+    </div>
+
   </div>
 
 </div>

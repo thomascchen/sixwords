@@ -641,10 +641,10 @@ $anchor-font-color-hover: scale-color($anchor-font-color, $lightness: -14%);
 // $form-label-font-size: rem-calc(14);
 // $form-label-font-weight: $font-weight-normal;
 // $form-label-line-height: 1.5;
-// $form-label-font-color: scale-color($black, $lightness: 30%);
+$form-label-font-color: #B4C0C7;
 // $form-label-small-transform: capitalize;
 // $form-label-bottom-margin: 0;
-// $input-font-family: inherit;
+$input-font-family: 'Libre Baskerville', serif;
 // $input-font-color: rgba(0,0,0,0.75);
 // $input-font-size: rem-calc(14);
 // $input-bg-color: $white;
@@ -819,7 +819,7 @@ $anchor-font-color-hover: scale-color($anchor-font-color, $lightness: -14%);
 // $label-font-weight: $font-weight-normal;
 // $label-font-color: $oil;
 // $label-font-color-alt: $white;
-// $label-font-family: $body-font-family;
+$label-font-family: 'Libre Baskerville', serif;
 
 // 17. Magellan
 // - - - - - - - - - - - - - - - - - - - - - - - - -

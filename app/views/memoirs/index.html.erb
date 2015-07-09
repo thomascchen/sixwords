@@ -1,14 +1,12 @@
 <div class="small-10 medium-12 large-12 small-centered columns text-center">
 
   <%= link_to root_path do %>
-    <div>
-      <h1 class="text-center heading">Six Word Memoirs</h1>
-    </div>
+    <h1 class="text-center heading animated pulse">Six Word Memoirs</h1>
   <% end %>
 
   <div class="row">
     <% @memoirs.each do |memoir| %>
-      <p class="animated zoomIn memoirs memoir-text"><%= link_to memoir_path(memoir) do %><%= memoir.memoir %><br>
+      <p class="animated fadeIn memoirs memoir-text"><%= link_to memoir_path(memoir) do %><%= memoir.memoir %><br>
         <%= memoir.name %>, <%= memoir.age %>, <%= memoir.neighborhood.name %>
         <% end %>
       </p>
