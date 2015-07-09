@@ -2,13 +2,13 @@
 
   <%= link_to root_path do %>
     <div>
-      <h1 class="text-center">Memoirs</h1>
+      <h1 class="text-center heading">Six Word Memoirs</h1>
     </div>
   <% end %>
 
   <div class="row">
     <% @memoirs.each do |memoir| %>
-      <p class="memoirs animated zoomIn"><%= link_to memoir_path(memoir) do %><%= memoir.memoir %><br>
+      <p class="animated zoomIn memoirs memoir-text"><%= link_to memoir_path(memoir) do %><%= memoir.memoir %><br>
         <%= memoir.name %>, <%= memoir.age %>, <%= memoir.neighborhood.name %>
         <% end %>
       </p>

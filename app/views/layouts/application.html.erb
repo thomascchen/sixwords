@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Sixwords</title>
+<link href='http://fonts.googleapis.com/css?family=Libre+Baskerville|EB+Garamond|Rock+Salt|Open+Sans:400,600' rel='stylesheet' type='text/css'>
+  <title>Six Word Memoirs</title>
   <%= stylesheet_link_tag 'application', media: 'all' %>
   <%= csrf_meta_tags %>
 </head>
@@ -10,25 +11,20 @@
   <nav class="top-bar">
     <ul class="title-area">
       <li class="name">
-        <h1><a href="/">Sixwords</a></h1>
+        <h1 class="nav-heading"><a href="/">Six Word Memoirs</a></h1>
       </li>
     </ul>
 
     <section class="top-bar-section">
-      <ul class="right">
-        <li><%= form_tag("/", method: "get") do %>
-        <%= text_field_tag(:query, nil, required: true) %></li>
-        <li><%= submit_tag("Search") %>
-        <% end %></li>
+      <ul class="right memoir-text">
+        <li>
+          <%= form_tag("/", method: "get") do %>
+            <%= text_field_tag(:query, nil, required: true, value: "Search Memoirs") %>
+          <% end %>
+        </li>
         <li><%= link_to "Random", memoirs_path %></li>
         <li><%= link_to "Neighborhoods", neighborhoods_path %></li>
         <li><%= link_to "Submit", new_memoir_path %></li>
-        <%- if current_user -%>
-          <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
-        <%- else -%>
-          <li><%= link_to 'Sign Up', new_user_registration_path %></li>
-          <li><%= link_to 'Sign In', new_user_session_path %></li>
-        <%- end -%>
       </ul>
     </section>
   </nav>
