@@ -31,8 +31,8 @@
           <%= f.text_field :memoir, class: "radius" %>
 
           <%= f.label :neighborhood_id %>
-          <%= f.select :neighborhood_id, Neighborhood.all.map { |n| [n.name, n.id] }, { class: "chosen-select" } %>
-
+          <%= f.select :neighborhood_id, Neighborhood.all.map { |n| [n.name, n.id] }, { }, { class: "chosen-select" } %>
+          
           <%= f.submit "Submit Your Memoir",  :class => 'button radius' %>
         <% end %>
     </div>
