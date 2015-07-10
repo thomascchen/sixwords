@@ -19,7 +19,7 @@
       <ul class="right memoir-text">
         <li>
           <%= form_tag("/", method: "get") do %>
-            <%= text_field_tag(:query, nil, required: true, value: "Search Memoirs", class: "radius") %>
+            <%= text_field_tag(:query, nil, required: true, value: "Search", class: "radius") %>
           <% end %>
         </li>
         <li><%= link_to "Random", memoirs_path %></li>

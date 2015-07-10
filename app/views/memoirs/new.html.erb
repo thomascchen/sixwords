@@ -14,11 +14,11 @@
     </div>
 <% end %>
 
-  <h1 class="text-center heading animated pulse">Submit a Memoir</h1>
+  <h1 class="text-center heading animated pulse">Submit Your Memoir</h1>
 
   <div class="small-10 medium-8 large-4 small-centered columns text-center">
 
-    <div class="text-left">
+    <div class="text-left animated fadeIn">
 
         <%= form_for @memoir do |f| %>
           <%= f.label :name %>
@@ -33,7 +33,7 @@
           <%= f.label :neighborhood_id %>
           <%= f.select :neighborhood_id, Neighborhood.all.map { |n| [n.name, n.id] }, { class: "chosen-select" } %>
 
-          <%= f.submit "Share Your Memoir",  :class => 'button radius' %>
+          <%= f.submit "Submit Your Memoir",  :class => 'button radius' %>
         <% end %>
     </div>
 
