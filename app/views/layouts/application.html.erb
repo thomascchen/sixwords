@@ -22,7 +22,7 @@
             <%= text_field_tag(:query, nil, required: true, value: "Search", class: "radius") %>
           <% end %>
         </li>
-        <li><%= link_to "Random", memoirs_path %></li>
+        <li><%= link_to "Random", memoir_path(Memoir.all.sample) %></li>
         <li><%= link_to "Neighborhoods", neighborhoods_path %></li>
         <li><%= link_to "Submit", new_memoir_path %></li>
       </ul>

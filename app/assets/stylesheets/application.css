@@ -51,6 +51,12 @@ body {
   font-family: 'Libre Baskerville', serif;
 }
 
+.memoir-text-subhead {
+  font-size: 300%;
+  font-family: 'Libre Baskerville', serif;
+  text-align: center;
+}
+
 h1 {
   color: #B4C0C7;
 }
