@@ -449,7 +449,7 @@ $anchor-font-color-hover: scale-color($anchor-font-color, $lightness: -14%);
 
 // We use these to control button text styles.
 $button-font-family: 'Libre Baskerville', serif;
-$button-font-color: #62727A;
+$button-font-color: #8CB2C7;
 // $button-font-color-alt: $oil;
 // $button-font-tny: rem-calc(11);
 // $button-font-sml: rem-calc(13);
@@ -459,14 +459,14 @@ $button-font-color: #62727A;
 // $button-font-align: center;
 
 // We use these to control various hover effects.
-$button-function-factor: +30%;
+// $button-function-factor: -14%;
 
 // We use these to control button border styles.
-// $button-border-width: 0;
+$button-border-width: thin;
 // $button-border-style: solid;
-$button-bg-color: #B4C0C7;
+$button-bg-color: #62727A;
 // $button-bg-hover: scale-color($button-bg-color, $lightness: $button-function-factor);
-// $button-border-color: $button-bg-hover;
+$button-border-color: #B4C0C7;
 // $secondary-button-bg-hover: scale-color($secondary-color, $lightness: $button-function-factor);
 // $secondary-button-border-color: $secondary-button-bg-hover;
 // $success-button-bg-hover: scale-color($success-color, $lightness: $button-function-factor);
