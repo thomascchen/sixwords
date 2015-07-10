@@ -1,5 +1,19 @@
 <div class="small-10 medium-12 large-12 small-centered columns text-center">
 
+<% if @memoir.errors.any? %>
+    <div id="error_explanation">
+      <h2 class="memoir-text">
+        Please fix
+        <%= pluralize(@memoir.errors.count, "error") %>:
+      </h2>
+      <p class="memoir-text">
+        <% @memoir.errors.full_messages.each do |msg| %>
+        <%= msg %><br>
+        <% end %>
+      </p>
+    </div>
+<% end %>
+
   <h1 class="text-center heading animated pulse">Submit a Memoir</h1>
 
   <div class="small-10 medium-8 large-4 small-centered columns text-center">
@@ -8,18 +22,18 @@
 
         <%= form_for @memoir do |f| %>
           <%= f.label :name %>
-          <%= f.text_field :name %>
+          <%= f.text_field :name, class: "radius" %>
 
           <%= f.label :age %>
-          <%= f.text_field :age %>
+          <%= f.text_field :age, class: "radius" %>
 
-          <%= f.label :memoir %>
-          <%= f.text_area :memoir %>
+          <%= f.label :memoir, "Six Word Memoir" %>
+          <%= f.text_field :memoir, class: "radius" %>
 
           <%= f.label :neighborhood_id %>
-          <%= f.select :neighborhood_id, Neighborhood.all.map {|n| [n.name, n.id]} %>
+          <%= f.select :neighborhood_id, Neighborhood.all.map { |n| [n.name, n.id] }, { class: "chosen-select" } %>
 
-          <%= f.submit "Submit" %>
+          <%= f.submit "Share Your Memoir",  :class => 'button radius' %>
         <% end %>
     </div>
 

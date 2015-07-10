@@ -10,6 +10,7 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
+ *= require chosen.min.css
  *= require_tree .
  *= require_self
  *= require foundation_and_overrides
@@ -18,6 +19,7 @@
 
 body {
   background-color: #62727A;
+  font-family: 'Libre Baskerville', serif;
 }
 
 .memoirs {
@@ -25,6 +27,7 @@ body {
   border-color: #B4C0C7;
   border-style: solid;
   border-width: thin;
+  border-radius: 3px;
   margin: 1%;
   padding: 5%;
   word-wrap: break-word;
@@ -32,6 +35,7 @@ body {
 
 .memoir-text {
   font-family: 'Libre Baskerville', serif;
+  color: #B4C0C7;
 }
 
 .memoir-text.heading {
@@ -45,6 +49,10 @@ body {
 .memoir-text-show {
   font-size: 400%;
   font-family: 'Libre Baskerville', serif;
+}
+
+h1 {
+  color: #B4C0C7;
 }
 
 .neighborhoods {
@@ -64,4 +72,18 @@ body {
 
 form {
   background-color: #62727A;
+}
+
+.input-color {
+  color: #B4C0C7;
+}
+
+label {
+  font-family: 'Libre Baskerville', serif;
+}
+
+.flash {
+  margin-top: 2%;
+  text-align: center;
+  color: #B4C0C7;
 }

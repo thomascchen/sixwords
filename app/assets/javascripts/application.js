@@ -13,6 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require foundation
+//= require chosen.jquery.min.js
 //= require_tree .
 
+$(".chosen-select").chosen()
 $(function(){ $(document).foundation(); });

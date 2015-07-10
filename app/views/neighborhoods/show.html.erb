@@ -1,10 +1,12 @@
 <div class="small-10 medium-9 large-8 small-centered columns text-center">
 
-    <h1><%= @neighborhood.name %> Memoirs</h1>
+    <h1 class="text-center heading animated pulse"><%= @neighborhood.name %> Memoirs</h1>
     <% @memoirs.each do |memoir| %>
-      <p class="memoirs animated zoomIn"><%= link_to memoir.memoir, memoir_path(memoir) %><br>
-        <%= memoir.name %>, <%= memoir.age %>, <%= memoir.neighborhood.name %><br>
-      </p><br>
+      <p class="memoirs animated fadeIn memoir-text"><%= link_to memoir_path(memoir) do%><%= memoir.memoir %><br>
+        <%= memoir.name %>, <%= memoir.age %>, <%= memoir.neighborhood.name %>
+        <% end %>
+      </p>
         </div>
     <% end %>
+
 </div>

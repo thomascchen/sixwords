@@ -1,6 +1,6 @@
 class MemoirsController < ApplicationController
   def index
-    if params[:query] == nil
+    if params[:query] == nil || params[:query].match(/^\s*$/)
       @memoirs = Memoir.order("random()")
     elsif params[:query].split.size == 1
       @memoirs = Memoir.where("memoir ILIKE '%#{params[:query]}%' OR name ILIKE '%#{params[:query]}%'")
@@ -23,10 +23,8 @@ class MemoirsController < ApplicationController
   def create
     @memoir = Memoir.new(memoir_params)
     if @memoir.save
-      flash[:notice] = 'Memoir added.'
       redirect_to memoir_path(@memoir)
     else
-      flash[:error] = @memoir.errors.full_messages.join(". ")
       render :new
     end
   end
