@@ -1,28 +1,17 @@
-== README
+## Six Word Memoirs
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Ernest Hemingway once won a bet that he could write a complete story in only six words: "Baby shoes. For sale. Never worn."​
 
-Things you may want to cover:
+**Six Word Memoirs** is an app where the people of Boston can read and share their own life stories in just six words.
 
-* Ruby version
+### Technologies Used
+- Ruby
+- Rails,
+- PostgreSQL
+- ActiveRecord
+- Devise
+- Foundation
+- jQuery
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+### Website
+[Six Word Memoirs](https://sixwords.herokuapp.com)
